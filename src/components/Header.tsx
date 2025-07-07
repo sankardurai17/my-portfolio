@@ -3,7 +3,8 @@ import { FaBars } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
 
 const links = [
-    { href: '#about', label: 'About' }
+    { href: '#about', label: 'About' },
+    { href: '#contact', label: 'Contact' }
   ];
   
 
