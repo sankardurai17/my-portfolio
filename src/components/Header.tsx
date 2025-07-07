@@ -15,7 +15,7 @@ export default function Header() {
     <header className="fixed w-full backdrop-blur-sm bg-glass/50 dark:bg-black/30 shadow-sm z-20">
       <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
         <a href="#" className="text-2xl font-extrabold text-primary">
-          Durai
+          Duraipaandiyaan Anbumani Poongothai
         </a>
 
         <div className="flex items-center gap-4">
