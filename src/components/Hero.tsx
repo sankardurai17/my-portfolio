@@ -26,7 +26,7 @@ export default function Hero() {
       </motion.p>
 
       <motion.a
-        href="./public/assets/Durai_Resume.pdf"
+        href={`${import.meta.env.BASE_URL}assets/Durai_Resume.pdf`}
         target="_blank"
         rel="noreferrer"
         initial={{ opacity: 0, y: 15 }}
