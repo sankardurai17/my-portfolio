@@ -6,6 +6,15 @@ export default function Hero() {
       {/* gradient background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-300 via-indigo-300 to-purple-300 dark:from-blue-900 dark:via-indigo-900 dark:to-purple-900" />
 
+      <motion.img
+        src={`${import.meta.env.BASE_URL}/assets/IMG_2200.JPG`}
+        alt="Durai profile"
+        initial={{ opacity: 0, scale: 0.10 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        className="w-48 h-48 md:w-54 md:h-54 rounded-full object-cover border-primary shadow-lg mb-4"
+      />
+
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
