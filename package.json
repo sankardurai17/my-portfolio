@@ -1,9 +1,9 @@
 {
-  "name": "my-portfolio",
+  "name": "durai-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sankardurai17.github.io/my-portfolio",
+  "homepage": "https://sankardurai17.github.io/durai-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
