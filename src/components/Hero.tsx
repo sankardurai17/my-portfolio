@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         /* ❯ fluid font size with clamp() */
-        className="font-extrabold mb-4 text-[clamp(4.5rem,5vw+1rem,4.5rem)]"
+        className="font-extrabold mb-4 text-[clamp(4.5rem,5vw+1rem,4.5rem)] text-gray-100"
       >
         Hi, I’m <span className="text-primary">Durai</span>
       </motion.h1>

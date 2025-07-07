@@ -1,48 +1,54 @@
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import ThemeToggle from './ThemeToggle';
+import useActiveSection from '../hooks/useActiveSection';
 
 const links = [
-    { href: '#about', label: 'About' },
-    {href : '#education', label: 'Education'},
-    { href: '#contact', label: 'Contact' }
-  ];
-  
-
+  { href: '#about',       id: 'about',       label: 'About' },
+  { href: '#education',   id: 'education',   label: 'Education' },
+  { href: '#contact',     id: 'contact',     label: 'Contact' },
+];
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const active = useActiveSection(links.map(l => l.id));
 
   return (
-    <header className="fixed w-full backdrop-blur-sm bg-glass/50 dark:bg-black/30 shadow-sm z-20">
-      <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
-        <a href="#" className="text-2xl font-extrabold text-primary">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0c1220] text-white">
+  <nav className="max-w-10xl mx-auto flex items-center justify-between px-7 py-7">
+        {/* Brand */}
+        <a href="#" className="text-lg md:text-xl font-extrabold text-primary whitespace-nowrap">
           Duraipaandiyaan Anbumani Poongothai
         </a>
 
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
-          <button
-            className="md:hidden"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
-          >
-            <FaBars size={24} />
-          </button>
-        </div>
+        {/* Burger (mobile) */}
+        <button
+          className="md:hidden text-gray-300"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation"
+        >
+          <FaBars size={24} />
+        </button>
 
-        <ul className="md:flex gap-8">
-  {links.map(({ href, label }) => (
-    <li key={href}>
-      <a
-        href={href}
-        className="block py-2 hover:text-primary transition
-                   [aria-current='true']:text-primary"
-      >
-        {label}
-      </a>
-    </li>
-  ))}
-</ul>
+        {/* Links */}
+        <ul
+          className={`${
+            open ? 'block' : 'hidden'
+          } absolute md:static top-16 left-0 right-0 bg-[#0c1220]/95
+             md:bg-transparent md:flex md:gap-6 px-4 py-4 md:p-0`}
+        >
+          {links.map(({ href, id, label }) => (
+            <li key={id}>
+              <a
+                href={href}
+                onClick={() => setOpen(false)}
+                className={`block py-2 md:py-0 transition ${
+                  active === id ? 'text-primary font-semibold' : 'text-gray-300'
+                }`}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );
