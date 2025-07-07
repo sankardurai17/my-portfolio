@@ -16,16 +16,18 @@ export default function About() {
         <h2 className="text-4xl font-bold mb-8 text-center">About Me</h2>
 
         <p className="text-lg md:text-xl leading-relaxed">
-          I’m a full-stack developer based in Canada with 2 + years at Ford Motor
-          Company, building scalable enterprise apps using&nbsp;Java, Spring Boot,
-          Angular, and Kafka. Skilled in REST-API design, CI/CD (Jenkins&nbsp;&amp; Tekton),
-          and cloud deployments on&nbsp;GCP.
+          Hey, I’m Durai — a full-stack developer who loves turning complex ideas into elegant, scalable solutions.
+          I bring 2+ years of professional experience from Ford Motor Company, where I worked on Java + Spring Boot backends,
+          Angular frontends, Kafka pipelines, and cloud-native deployments on GCP.
         </p>
 
         <p className="text-lg md:text-xl leading-relaxed mt-6">
-          Recently completed my Master of Applied Computer Science at Concordia
-          University, Montréal. Passionate about clean code, cloud-native
-          architecture, and solving real-world problems with technology.
+          I recently completed my Master’s in Applied Computer Science at Concordia University, Montréal,
+          and I’m deeply passionate about writing clean code, building resilient systems, and shipping products that solve real problems.
+        </p>
+
+        <p className="text-lg md:text-xl leading-relaxed mt-6">
+          Whether it’s designing microservices, mentoring junior devs, or learning a new tech stack — I’m driven by curiosity, collaboration, and impact.
         </p>
       </motion.div>
     </section>

@@ -4,6 +4,7 @@ import useActiveSection from '../hooks/useActiveSection';
 
 const links = [
   { href: '#about',       id: 'about',       label: 'About' },
+  { href: '#whatido',     id: 'whatido',     label: 'Skills' },
   { href: '#education',   id: 'education',   label: 'Education' },
   { href: '#contact',     id: 'contact',     label: 'Contact' },
 ];
