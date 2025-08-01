@@ -17,8 +17,8 @@ export default function About() {
 
         <p className="text-lg md:text-xl leading-relaxed">
           Hey, I’m Durai — a full-stack developer who loves turning complex ideas into elegant, scalable solutions.
-          I bring 2+ years of professional experience from Ford Motor Company, where I worked on Java + Spring Boot backends,
-          Angular frontends, Kafka pipelines, and cloud-native deployments on GCP.
+          I bring 2+ years of professional experience from Ford Motor Company, where I worked predominantly on Java + Spring Boot backends,
+          Angular frontends, SQL & NoSQL Data bases, CI/CD pipelines, and cloud-native deployments on GCP.
         </p>
 
         <p className="text-lg md:text-xl leading-relaxed mt-6">
