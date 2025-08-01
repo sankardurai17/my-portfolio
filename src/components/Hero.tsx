@@ -31,7 +31,7 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.2 }}
         className="max-w-xl text-lg md:text-xl text-gray-700 dark:text-gray-200"
       >
-        Full-Stack Developer · Java · Spring Boot · React · MongoDB · GCP
+        Full-Stack Developer · Java · Spring Boot · Angular · React · SQL · Cloud-Native Deployments
       </motion.p>
 
       <motion.a
