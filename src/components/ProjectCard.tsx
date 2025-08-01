@@ -9,7 +9,7 @@ export default function ProjectCard(props: Project) {
       whileHover={{ y: -6, scale: 1.02 }}
       className="rounded-xl bg-surface dark:bg-surfaceDark shadow-md hover:shadow-lg transition overflow-hidden"
     >
-      <img src={`${import.meta.env.BASE_URL}${image}`} alt={title} className="h-70 w-full object-cover" />
+      <img src={`${import.meta.env.BASE_URL}${image}`} alt={title} className="h-50 w-full object-cover" />
 
       <div className="p-5 flex flex-col gap-2">
         <h3 className="text-xl text-white font-semibold">{title}</h3>

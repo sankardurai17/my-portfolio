@@ -1,6 +1,13 @@
 import { projects } from '../data/projects';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
+import Masonry from 'react-masonry-css';
+
+const breakpointColumns = {
+  default: 3,
+  1024: 2,
+  640: 1,
+};
 
 export default function Projects() {
   return (
@@ -9,7 +16,6 @@ export default function Projects() {
         Projects
       </h2>
 
-      {/* auto-fit grid → 280 px min, fills as many cols as space allows */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -19,20 +25,25 @@ export default function Projects() {
           visible: {
             opacity: 1,
             y: 0,
-            transition: { staggerChildren: 0.15 },
+            transition: { staggerChildren: 0.1 },
           },
         }}
-        className="grid gap-10 max-w-6xl mx-auto
-                   [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]"
+        className="max-w-6xl mx-auto px-4"
       >
-        {projects.map((p) => (
-          <motion.div
-            key={p.title}
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-          >
-            <ProjectCard {...p} />
-          </motion.div>
-        ))}
+        <Masonry
+          breakpointCols={breakpointColumns}
+          className="flex gap-6"
+          columnClassName="space-y-6"
+        >
+          {projects.map((p) => (
+            <motion.div
+              key={p.title}
+              variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+            >
+              <ProjectCard {...p} />
+            </motion.div>
+          ))}
+        </Masonry>
       </motion.div>
     </section>
   );
