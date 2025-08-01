@@ -15,14 +15,14 @@ export interface Project {
       link: 'https://github.com/sankardurai17/tubelytics-app-fall2024',
       image: '/assets/ytlytics.png',
     },
-    {
-      title: 'MealsNow – Multi-Vendor Food Delivery System',
-      description:
-        'Designed and developed a scalable food delivery platform with vendor and customer modules. Implemented secure REST APIs using Spring Boot 3, integrated PostgreSQL for persistence, and deployed backend services on GCP. Planned enhancements include Kafka-based real-time order tracking and notification service.',
-      tech: ['Java', 'Spring Boot 3', 'PostgreSQL', 'GCP', 'Spring Security', 'REST API', 'Docker', 'Kakfa'],
-      link: 'https://github.com/sankardurai17/mealsnow', 
-      image: '/assets/mealsnow.png' 
-    },
+    // {
+    //   title: 'MealsNow – Multi-Vendor Food Delivery System',
+    //   description:
+    //     'Designed and developed a scalable food delivery platform with vendor and customer modules. Implemented secure REST APIs using Spring Boot 3, integrated PostgreSQL for persistence, and deployed backend services on GCP. Planned enhancements include Kafka-based real-time order tracking and notification service.',
+    //   tech: ['Java', 'Spring Boot 3', 'PostgreSQL', 'GCP', 'Spring Security', 'REST API', 'Docker', 'Kakfa'],
+    //   link: 'https://github.com/sankardurai17/mealsnow', 
+    //   image: '/assets/mealsnow.png' 
+    // },
     {
       title: 'Inventory-Based System for Super Market Management',
       description:
