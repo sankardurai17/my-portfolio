@@ -62,7 +62,7 @@ export interface Project {
         'Designed and built a fully responsive portfolio using React, Tailwind CSS, and Framer Motion. Highlights include dark mode, smooth animations, project showcase, experience timeline, and Formspree contact integration. Deployed via GitHub Pages.',
       tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Formspree', 'GitHub Pages'],
       link: 'https://github.com/sankardurai17/durai-portfolio',
-      image: '/assets/portfolio.png' // Add a screenshot here
+      image: '/assets/PortFolio.png'
     }
     
     // ,
