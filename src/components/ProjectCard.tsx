@@ -12,8 +12,8 @@ export default function ProjectCard(props: Project) {
       <img src={`${import.meta.env.BASE_URL}${image}`} alt={title} className="h-70 w-full object-cover" />
 
       <div className="p-5 flex flex-col gap-2">
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <p className="text-sm">{description}</p>
+        <h3 className="text-xl text-white font-semibold">{title}</h3>
+        <p className="text-sm text-white">{description}</p>
         <p className="text-xs text-gray-500">{tech.join(' • ')}</p>
         <a
           href={link}
