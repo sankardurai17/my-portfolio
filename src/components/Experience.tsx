@@ -1,28 +1,12 @@
 import { motion } from 'framer-motion';
 
-const fadeSide = (custom: number) => ({
-  hidden: {
-    opacity: 0,
-    x: custom % 2 === 0 ? -80 : 80,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delay: custom * 0.2,
-      duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1],
-    },
-  },
-});
-
 const experiences = [
   {
     title: 'Software Engineer – Full Stack Java Developer',
     company: 'Ford Motor Company (Ford Business Solutions), Chennai, India',
     duration: 'May 2023 – July 2023',
     points: [
-      'Migrated key services to Google Cloud Platform (GCP), reducing infrastructure costs and streamlining deployments.',
+      'Migrated key services to GCP, reducing infrastructure costs and streamlining deployments.',
       'Built Kafka streams to support real-time data synchronization across distributed services, enabling dynamic updates and decoupled system communication.',
       'Optimized MySQL performance using query refactoring, stored procedures, and index tuning for faster transactional processing and reporting.',
       'Mentored junior developers and supported cross-functional Agile teams, accelerating onboarding and delivery.',
@@ -48,6 +32,26 @@ const experiences = [
   },
 ];
 
+// Animation helpers
+function getInitial(index: number) {
+  return {
+    opacity: 0,
+    x: index % 2 === 0 ? -100 : 100,
+  };
+}
+
+function getAnimate(index: number) {
+  return {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: index * 0.2,
+      duration: 0.6,
+      ease: 'easeOut' as const,
+    },
+  };
+}
+
 export default function Experience() {
   return (
     <section id="experience" className="py-24 bg-surface dark:bg-surfaceDark">
@@ -62,7 +66,7 @@ export default function Experience() {
       </motion.h2>
 
       <div className="relative max-w-6xl mx-auto px-4">
-        {/* Center timeline line */}
+        {/* Timeline line */}
         <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-primary/40 transform -translate-x-1/2"></div>
 
         <div className="space-y-16">
@@ -73,17 +77,14 @@ export default function Experience() {
               <motion.div
                 key={index}
                 custom={index}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeSide}
-                className={`
-                  relative md:w-1/2 w-full
-                  ${isLeft ? 'md:pr-10 md:ml-0 md:mr-auto' : 'md:pl-10 md:mr-0 md:ml-auto'}
-                `}
+                initial={getInitial(index)}
+                whileInView={getAnimate(index)}
+                viewport={{ once: true, amount: 0.3 }}
+                className={`relative md:w-1/2 w-full ${
+                  isLeft ? 'md:pr-10 md:ml-0 md:mr-auto' : 'md:pl-10 md:ml-auto md:mr-0'
+                }`}
               >
                 <div className="bg-surfaceAlt dark:bg-surfaceAltDark rounded-xl shadow-lg p-6">
-                  {/* Ford logo + title */}
                   <div className="flex items-center gap-3 mb-3">
                     <img
                       src={`${import.meta.env.BASE_URL}assets/ford-logo.png`}
