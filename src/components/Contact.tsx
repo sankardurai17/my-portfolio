@@ -59,7 +59,7 @@ export default function Contact() {
       >
         {/* Name */}
         <div className="grid gap-2">
-          <label htmlFor="name" className="text-sm font-medium text-text dark:text-textDark">
+          <label htmlFor="name" className="text-sm text-white font-medium ">
             Name
           </label>
           <input
@@ -67,13 +67,13 @@ export default function Contact() {
             id="name"
             name="name"
             required
-            className="px-4 py-3 rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
+            className="px-4 py-3 text-white rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
           />
         </div>
 
         {/* Email */}
         <div className="grid gap-2">
-          <label htmlFor="email" className="text-sm font-medium text-text dark:text-textDark">
+          <label htmlFor="email" className="text-sm text-white font-medium text-white">
             Email
           </label>
           <input
@@ -81,13 +81,13 @@ export default function Contact() {
             id="email"
             name="email"
             required
-            className="px-4 py-3 rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
+            className="px-4 py-3 text-white rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
           />
         </div>
 
         {/* Message */}
         <div className="grid gap-2">
-          <label htmlFor="message" className="text-sm font-medium text-text dark:text-textDark">
+          <label htmlFor="message" className="text-sm text-white  font-medium">
             Message
           </label>
           <textarea
@@ -95,7 +95,7 @@ export default function Contact() {
             name="message"
             rows={5}
             required
-            className="px-4 py-3 rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
+            className="px-4 py-3 text-white rounded-lg bg-surfaceAlt dark:bg-surfaceAltDark border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-primary focus:ring-1 outline-none transition"
           />
         </div>
 
